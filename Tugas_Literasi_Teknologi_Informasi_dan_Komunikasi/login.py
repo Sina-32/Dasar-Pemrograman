@@ -3,7 +3,7 @@ print(f"Silahkan Login")
 def login():
     username_terdaftar = "Daspro2024"
     password_terdaftar = "Latihan"
-    kesempatan = 3
+    kesempatan = 5
 
     while kesempatan > 0:
         username = input("Masukkan username: ")
@@ -16,7 +16,7 @@ def login():
             kesempatan -= 1
             print(f"Username atau password salah! Kesempatan tersisa: {kesempatan}")
             if kesempatan == 0:
-                break  # Keluar dari loop langsung jika kesempatan habis
+                break  
             if username != username_terdaftar and password != password_terdaftar:
                 print(f"Username dan password salah! Kesempatan tersisa: {kesempatan}")
             elif username != username_terdaftar:
@@ -24,7 +24,6 @@ def login():
             elif password != password_terdaftar:
                 print(f"Password salah! Kesempatan tersisa: {kesempatan}")
 
-    print("Anda telah keluar dari halaman login")
     print("Anda telah keluar dari sistem login")
 
 login()
