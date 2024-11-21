@@ -3,6 +3,7 @@ Nama: Sina Pijar Sahmura
 Nim: 2400606
 Kelas: 1B
 '''
+print("Merge Sort")
 def merge_sort(arr):
     if len(arr) <= 1:
         return arr
@@ -39,4 +40,24 @@ unsortedArr = [7, 1, 36, 26, 63, 93, 55, 16, 19, 38, 74, 65, 18, 59, 8, 43, 24, 
 
 sortedArr = merge_sort(unsortedArr)
 
-print(sortedArr)
+print(f"sebelum diurutkan {unsortedArr}")
+print(f"Setela diurutkan {sortedArr}")
+
+import time
+
+# Catat waktu mulai
+start_time = time.time()
+
+# Kode yang ingin diukur waktunya
+for i in range(1000000):
+    pass
+
+# Catat waktu selesai
+end_time = time.time()
+
+# Hitung selisih waktu
+execution_time = end_time - start_time
+
+# Format output dengan 4 angka di belakang koma
+print(f"Waktu Eksekusi: {execution_time:.4f}")
+
