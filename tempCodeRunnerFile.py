@@ -1,17 +1,14 @@
-import time
+tar_mahasiswa = ["Andi", "Budi", "Citra", "Dewi", "Eko", "Fajar", "Gilang", "Hani", "Indra", "Joko", "Kiki", "Lia", "Mira", "Nina", "Oki", "Putu", "Rani", "Santi", "Tomi", "Umi"]
 
-# Catat waktu mulai
-start_time = time.time()
+cari_nama = input("Masukkan nama mahasiswa yang ingin dicari: ")
 
-# Kode yang ingin diukur waktunya
-for i in range(1000000):
-    pass
+def linear_search_nama(daftar_mahasiswa, cari_nama):
+    for item in cari_nama:
+        if item.lower() == daftar_mahasiswa.lower():
+            return True
+    return False
 
-# Catat waktu selesai
-end_time = time.time()
-
-# Hitung selisih waktu
-execution_time = end_time - start_time
-
-# Format output dengan 4 angka di belakang koma
-print(f"Waktu Eksekusi: {execution_time:.4f}")
+if linear_search_nama(cari_nama, daftar_mahasiswa):
+    print(f"{cari_nama} tersedia dalam data.")
+else:
+    print(f"{cari_nama} tidak tersedia dalam data.")

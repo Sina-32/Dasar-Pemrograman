@@ -30,14 +30,14 @@ print(f"Setela diurutkan {sortedarr}")
 import time
 
 # Catat waktu mulai
-start_time = time.time()
+start_time = time.perf_counter()
 
 # Kode yang ingin diukur waktunya
 for i in range(1000000):
     pass
 
 # Catat waktu selesai
-end_time = time.time()
+end_time = time.perf_counter()
 
 # Hitung selisih waktu
 execution_time = end_time - start_time
